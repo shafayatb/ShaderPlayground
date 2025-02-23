@@ -9,10 +9,6 @@ uniform vec3 circles[num_circles];
 
 varying vec2 pos;
 
-void vertex() {
-	
-}
-
 void fragment() {
 	/* Basic gradient shader example
 	float current_a = texture(TEXTURE, UV).a;
@@ -54,7 +50,3 @@ void fragment() {
 	COLOR = target_color;
 }
 
-//void light() {
-	// Called for every pixel for every light affecting the CanvasItem.
-	// Uncomment to replace the default light processing function with this one.
-//}

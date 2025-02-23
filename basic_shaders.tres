@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b48ajdost6p6m"]
+
+[ext_resource type="Shader" path="res://shader_test.gdshader" id="1_g2xql"]
+
+[resource]
+shader = ExtResource("1_g2xql")
+shader_parameter/g_color = 0.6
+shader_parameter/b_color = 0.1
+shader_parameter/millies = null
+shader_parameter/color = Vector3(1, 0.5, 0)
+shader_parameter/circles = PackedVector3Array()
