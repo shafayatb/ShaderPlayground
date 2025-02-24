@@ -4,4 +4,4 @@
 
 [resource]
 shader = ExtResource("1_orfwk")
-shader_parameter/invert = false
+shader_parameter/invert = true

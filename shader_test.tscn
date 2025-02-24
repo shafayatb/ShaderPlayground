@@ -15,7 +15,18 @@ texture = ExtResource("1_v4mft")
 script = ExtResource("1_c1c64")
 
 [node name="Blacknwhite" type="Sprite2D" parent="."]
-material = ExtResource("2_cjoq5")
 position = Vector2(607, 308)
 texture = ExtResource("3_gibmb")
 script = ExtResource("5_0mdu4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = ExtResource("2_cjoq5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.34902, 1, 1)
