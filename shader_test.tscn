@@ -1,27 +1,35 @@
-[gd_scene load_steps=6 format=3 uid="uid://dc5jevqicwk71"]
+[gd_scene load_steps=8 format=3 uid="uid://dc5jevqicwk71"]
 
 [ext_resource type="Script" path="res://shader_test.gd" id="1_c1c64"]
+[ext_resource type="Shader" uid="uid://cx6ijl508nt0x" path="res://visual_shaders/visual_shader_basic.tres" id="1_d0j8p"]
 [ext_resource type="Texture2D" uid="uid://nkserftbik4g" path="res://icon.svg" id="1_v4mft"]
-[ext_resource type="Material" uid="uid://c4sv2fnq4th1e" path="res://inverted_shader.tres" id="2_cjoq5"]
+[ext_resource type="Material" uid="uid://c4sv2fnq4th1e" path="res://code_shaders/inverted_shader.tres" id="2_cjoq5"]
 [ext_resource type="Texture2D" uid="uid://ds4qwmwce4pmc" path="res://blacknwhite.png" id="3_gibmb"]
 [ext_resource type="Script" path="res://blacknwhite.gd" id="5_0mdu4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_snnoy"]
+shader = ExtResource("1_d0j8p")
 
 [node name="ShaderTest" type="Node2D"]
 
 [node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_snnoy")
 position = Vector2(505.5, 311.5)
 scale = Vector2(2.58594, 2.58594)
 texture = ExtResource("1_v4mft")
 script = ExtResource("1_c1c64")
 
 [node name="Blacknwhite" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(607, 308)
 texture = ExtResource("3_gibmb")
 script = ExtResource("5_0mdu4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 material = ExtResource("2_cjoq5")
 anchors_preset = 15
 anchor_right = 1.0

@@ -1,0 +1,18 @@
+[gd_resource type="VisualShader" load_steps=2 format=3 uid="uid://cx6ijl508nt0x"]
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_r3vrs"]
+output_port_for_preview = 0
+constant = 0.2
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+
+
+"
+graph_offset = Vector2(-274.766, -32.7639)
+mode = 1
+flags/light_only = false
+nodes/fragment/2/node = SubResource("VisualShaderNodeFloatConstant_r3vrs")
+nodes/fragment/2/position = Vector2(-40, 120)
