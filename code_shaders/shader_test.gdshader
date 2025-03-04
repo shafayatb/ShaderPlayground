@@ -29,7 +29,7 @@ void fragment() {
 	*/
 	/*
 	Circle SDF
-	
+
 	vec3 circle = vec3(0.5, 0.5, 0.3);
 	float d = length(UV - circle.xy) - circle.z;
 	//COLOR = vec4(d, d, d, 1.0);
@@ -44,7 +44,7 @@ void fragment() {
 		d = step(0.0, d);
 		colour *= d;
 	}
-	
+
 	float current_a = texture(TEXTURE, UV).a;
 	vec4 target_color = mix(texture(TEXTURE, UV), vec4(vec3(colour, colour, colour), current_a), .8);
 	COLOR = target_color;

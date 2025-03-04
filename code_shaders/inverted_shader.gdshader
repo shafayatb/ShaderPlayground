@@ -8,9 +8,9 @@ void fragment() {
 	vec4 screen_color = texture(SCREEN_TEXTURE, SCREEN_UV);
 	vec3 grey = vec3(0.5);
 	float dist = screen_color.r - grey.r;
-	
+
 	COLOR.rgb = grey + vec3(dist * contrast);
-	
+
 	if(invert){
 		COLOR.rgb = grey - vec3(dist * contrast);
 	}
