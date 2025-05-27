@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://c1i7leftlhf6v"]
+
+[ext_resource type="Shader" uid="uid://biaaa3fgmbavy" path="res://code_shaders/uv_texture.gdshader" id="1_dh222"]
+
+[sub_resource type="Gradient" id="Gradient_dh222"]
+colors = PackedColorArray(0.192157, 0.447059, 0.866667, 1, 1, 0.521569, 0.313726, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vnamh"]
+gradient = SubResource("Gradient_dh222")
+fill_from = Vector2(0.0378788, 0.0984849)
+fill_to = Vector2(0.825758, 0.856061)
+
+[resource]
+shader = ExtResource("1_dh222")
+shader_parameter/gradient_texture = SubResource("GradientTexture2D_vnamh")
