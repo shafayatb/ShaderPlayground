@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://drmorgnbud1d5"]
+
+[ext_resource type="Shader" uid="uid://d0n6m4ckqgs8k" path="res://code_shaders/chromatic_abberation.gdshader" id="1_jqk8u"]
+
+[resource]
+shader = ExtResource("1_jqk8u")
+shader_parameter/offset = 100.0
