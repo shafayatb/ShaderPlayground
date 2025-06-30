@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://csqy25exr08j8"]
+
+[ext_resource type="Shader" uid="uid://c7jfff42r4fod" path="res://code_shaders/ripple_reflections.gdshader" id="1_r1smc"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_j4lnj"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ha4oe"]
+seamless = true
+noise = SubResource("FastNoiseLite_j4lnj")
+
+[resource]
+shader = ExtResource("1_r1smc")
+shader_parameter/x_offset = 2.375e-08
+shader_parameter/deg = 0.0
+shader_parameter/speed = 30.0
+shader_parameter/amount = 0.03
+shader_parameter/freq = 1000.0
+shader_parameter/noise = SubResource("NoiseTexture2D_ha4oe")
+shader_parameter/x_amount = 0.9
+shader_parameter/y_amount = 0.5
+shader_parameter/tint = Color(0, 0.647059, 0.764706, 1)
+shader_parameter/scale = Vector2(0, 0)
+shader_parameter/zoom = Vector2(0, 0)
