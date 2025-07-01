@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://7ga0oj4qnty4"]
+
+[ext_resource type="Shader" uid="uid://of782e1i2nuk" path="res://code_shaders/chalk_shader_with_noise.gdshader" id="1_75fwi"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_va7ia"]
+noise_type = 0
+frequency = 0.05
+fractal_octaves = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_41m5q"]
+seamless = true
+noise = SubResource("FastNoiseLite_va7ia")
+
+[resource]
+shader = ExtResource("1_75fwi")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_41m5q")
+shader_parameter/noise_scale = 34.167
+shader_parameter/noise_speed = 0.0
+shader_parameter/speckle_threshold = 0.562
+shader_parameter/speckle_color = Color(1, 1, 1, 1)
+shader_parameter/intensity = 0.302
+shader_parameter/contrast = 1.516

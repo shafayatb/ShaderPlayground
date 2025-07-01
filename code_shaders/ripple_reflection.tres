@@ -10,14 +10,11 @@ noise = SubResource("FastNoiseLite_j4lnj")
 
 [resource]
 shader = ExtResource("1_r1smc")
-shader_parameter/x_offset = 2.375e-08
-shader_parameter/deg = 0.0
-shader_parameter/speed = 30.0
-shader_parameter/amount = 0.03
-shader_parameter/freq = 1000.0
+shader_parameter/speed = 315.5
+shader_parameter/amount = 0.18
 shader_parameter/noise = SubResource("NoiseTexture2D_ha4oe")
-shader_parameter/x_amount = 0.9
-shader_parameter/y_amount = 0.5
+shader_parameter/x_amount = 0.8
+shader_parameter/y_amount = 0.6
 shader_parameter/tint = Color(0, 0.647059, 0.764706, 1)
-shader_parameter/scale = Vector2(0, 0)
-shader_parameter/zoom = Vector2(0, 0)
+shader_parameter/scale = Vector2(6.77344, 5.67188)
+shader_parameter/zoom = Vector2(0, 0.318631)

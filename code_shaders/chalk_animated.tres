@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ddaee2p4skmq2"]
+
+[ext_resource type="Shader" uid="uid://chkjeiq2c5lfw" path="res://code_shaders/chailk_scratch_shader.gdshader" id="1_mjq7d"]
+
+[resource]
+shader = ExtResource("1_mjq7d")
+shader_parameter/intensity = 1.0
+shader_parameter/contrast = 1.5
+shader_parameter/speckle_color = Color(1, 1, 1, 1)
+shader_parameter/speckle_amount = 0.1
+shader_parameter/scratch_strength = 0.5
+shader_parameter/scratch_speed = 1.0
+shader_parameter/scratch_dir = Vector2(1, 1)

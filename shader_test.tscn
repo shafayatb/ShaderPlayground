@@ -20,14 +20,15 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(612, 361)
+position = Vector2(542, 313)
 scale = Vector2(4.24219, 4.24219)
 texture = ExtResource("1_v4mft")
 
 [node name="Icon" type="Sprite2D" parent="."]
+visible = false
 material = ExtResource("2_p4bue")
-position = Vector2(641.5, 398.5)
-scale = Vector2(4.61719, 3.44531)
+position = Vector2(484.5, 322)
+scale = Vector2(6.77344, 5.67188)
 texture = ExtResource("1_v4mft")
 script = ExtResource("3_qdfbv")
 

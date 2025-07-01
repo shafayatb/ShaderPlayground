@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ddcw5kfnvsqop"]
+
+[ext_resource type="Shader" uid="uid://bfqi17q5cs186" path="res://code_shaders/chalk_shader.gdshader" id="1_pshjj"]
+
+[resource]
+shader = ExtResource("1_pshjj")
+shader_parameter/intensity = 1.0
+shader_parameter/contrast = 1.5
+shader_parameter/speckle_color = Color(1, 1, 1, 1)
+shader_parameter/speckle_amount = 0.2
