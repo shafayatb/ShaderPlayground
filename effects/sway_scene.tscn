@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh5jj48jsxtkn"]
+
+[ext_resource type="Script" uid="uid://c3mwnklwyfxp3" path="res://effects/sway_scene.gd" id="1_7axrv"]
+[ext_resource type="Texture2D" uid="uid://nkserftbik4g" path="res://icon.svg" id="2_i28su"]
+
+[node name="SwayScene" type="Node2D"]
+script = ExtResource("1_7axrv")
+sway_amount = Vector2(32, 0)
+sway_duration = 0.5
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(544, 293)
+texture = ExtResource("2_i28su")
