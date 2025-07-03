@@ -7,7 +7,7 @@ func _ready() -> void:
 	camera_shake_noise = FastNoiseLite.new()
 	
 	var camera_tween = get_tree().create_tween()
-	camera_tween.tween_method(start_camera_shake, 5.0, 1.0, 0.5)
+	camera_tween.tween_method(start_camera_shake, 100.0, 1.0, 0.5)
 	camera_tween.set_loops(10)
 	
 func start_camera_shake(intensity: float):
