@@ -5,7 +5,7 @@
 
 [node name="ShakeScene" type="Node2D"]
 script = ExtResource("1_lovkv")
-shake_duration = 0.1
+shake_duration = 1.0
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(507, 266)
