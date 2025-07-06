@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://deyhyqx3flh4b"]
+
+[ext_resource type="Shader" uid="uid://cmiotnigjfgy" path="res://visual_shaders/simple_outline.tres" id="1_cqvns"]
+
+[resource]
+shader = ExtResource("1_cqvns")
+shader_parameter/OutlineColor = Color(0, 0.694118, 0.760784, 1)
+shader_parameter/Widh = 3.0

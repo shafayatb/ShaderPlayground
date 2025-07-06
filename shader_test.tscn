@@ -1,14 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://dc5jevqicwk71"]
 
-[ext_resource type="Shader" uid="uid://c3kmhatf4d7tv" path="res://visual_shaders/scanline_shader.tres" id="1_qdfbv"]
 [ext_resource type="Texture2D" uid="uid://nkserftbik4g" path="res://icon.svg" id="1_v4mft"]
 [ext_resource type="Material" uid="uid://csqy25exr08j8" path="res://code_shaders/ripple_reflection.tres" id="2_p4bue"]
 [ext_resource type="Texture2D" uid="uid://ds4qwmwce4pmc" path="res://blacknwhite.png" id="3_gibmb"]
 [ext_resource type="Script" uid="uid://c83n0ckcoy77w" path="res://ripple_tool.gd" id="3_qdfbv"]
 [ext_resource type="Script" uid="uid://bjgokpep0bj8x" path="res://blacknwhite.gd" id="5_0mdu4"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4sh6q"]
-shader = ExtResource("1_qdfbv")
+[ext_resource type="Material" uid="uid://deyhyqx3flh4b" path="res://visual_shaders/simple_outline_shader.tres" id="6_4sh6q"]
+[ext_resource type="Texture2D" uid="uid://eck5ouwvjsbi" path="res://assets/head.png" id="7_1mq4w"]
 
 [node name="ShaderTest" type="Node2D"]
 
@@ -24,9 +22,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Icon2" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_4sh6q")
 position = Vector2(542, 313)
-scale = Vector2(4.24219, 4.24219)
 texture = ExtResource("1_v4mft")
 
 [node name="Icon" type="Sprite2D" parent="."]
@@ -42,3 +38,8 @@ visible = false
 position = Vector2(607, 308)
 texture = ExtResource("3_gibmb")
 script = ExtResource("5_0mdu4")
+
+[node name="Head" type="Sprite2D" parent="."]
+material = ExtResource("6_4sh6q")
+position = Vector2(780, 326)
+texture = ExtResource("7_1mq4w")
