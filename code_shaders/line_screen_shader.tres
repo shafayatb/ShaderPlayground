@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dhof6twpios61"]
+
+[ext_resource type="Shader" uid="uid://di1doqs0nt635" path="res://code_shaders/line_screen.gdshader" id="1_5a7cu"]
+
+[resource]
+shader = ExtResource("1_5a7cu")
+shader_parameter/target = Vector2(0.5, 0.5)
+shader_parameter/intensity = 0.72

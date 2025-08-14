@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dc5jevqicwk71"]
+[gd_scene load_steps=12 format=3 uid="uid://dc5jevqicwk71"]
 
 [ext_resource type="Texture2D" uid="uid://nkserftbik4g" path="res://icon.svg" id="1_v4mft"]
 [ext_resource type="Material" uid="uid://csqy25exr08j8" path="res://code_shaders/ripple_reflection.tres" id="2_p4bue"]
@@ -7,19 +7,69 @@
 [ext_resource type="Script" uid="uid://bjgokpep0bj8x" path="res://blacknwhite.gd" id="5_0mdu4"]
 [ext_resource type="Material" uid="uid://deyhyqx3flh4b" path="res://visual_shaders/simple_outline_shader.tres" id="6_4sh6q"]
 [ext_resource type="Texture2D" uid="uid://eck5ouwvjsbi" path="res://assets/head.png" id="7_1mq4w"]
+[ext_resource type="Material" uid="uid://df1h55w38p1g" path="res://code_shaders/shockwave_shader.tres" id="8_1mq4w"]
+
+[sub_resource type="Animation" id="Animation_movfo"]
+resource_name = "pulse"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/force")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.05]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_n1cy7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/force")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aigp2"]
+_data = {
+&"RESET": SubResource("Animation_n1cy7"),
+&"pulse": SubResource("Animation_movfo")
+}
 
 [node name="ShaderTest" type="Node2D"]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
 
 [node name="Icon2" type="Sprite2D" parent="."]
 position = Vector2(542, 313)
@@ -34,7 +84,6 @@ texture = ExtResource("1_v4mft")
 script = ExtResource("3_qdfbv")
 
 [node name="Blacknwhite" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(607, 308)
 texture = ExtResource("3_gibmb")
 script = ExtResource("5_0mdu4")
@@ -43,3 +92,19 @@ script = ExtResource("5_0mdu4")
 material = ExtResource("6_4sh6q")
 position = Vector2(780, 326)
 texture = ExtResource("7_1mq4w")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = ExtResource("8_1mq4w")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_aigp2")
+}

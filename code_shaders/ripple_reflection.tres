@@ -17,4 +17,4 @@ shader_parameter/x_amount = 0.8
 shader_parameter/y_amount = 0.6
 shader_parameter/tint = Color(0, 0.647059, 0.764706, 1)
 shader_parameter/scale = Vector2(6.77344, 5.67188)
-shader_parameter/zoom = Vector2(0, 0.5)
+shader_parameter/zoom = Vector2(0, 0.263331)
