@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://csdrgi5x6ll5r"]
+
+[ext_resource type="Shader" uid="uid://e27dqhoihgk2" path="res://code_shaders/guassian_blur.gdshader" id="1_8lwiu"]
+
+[resource]
+shader = ExtResource("1_8lwiu")
+shader_parameter/target = Vector2(0.5, 0.5)
+shader_parameter/intensity = 100.0

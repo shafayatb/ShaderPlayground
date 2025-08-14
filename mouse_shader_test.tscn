@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvker77qhbxl1"]
+[gd_scene load_steps=5 format=3 uid="uid://bvker77qhbxl1"]
 
 [ext_resource type="Script" uid="uid://5pc086ydf6g4" path="res://mouse_shader_test.gd" id="1_j16d8"]
 [ext_resource type="Material" uid="uid://dhof6twpios61" path="res://code_shaders/line_screen_shader.tres" id="2_qca7y"]
+[ext_resource type="Material" uid="uid://csdrgi5x6ll5r" path="res://code_shaders/guassian_blur_shader.tres" id="3_hd1p7"]
+[ext_resource type="Texture2D" uid="uid://bg5rt36j5vsud" path="res://assets/simple_bg.jpg" id="3_qca7y"]
 
 [node name="MouseShaderTest" type="Node2D"]
 script = ExtResource("1_j16d8")
@@ -9,9 +11,23 @@ script = ExtResource("1_j16d8")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 material = ExtResource("2_qca7y")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Blur" type="ColorRect" parent="CanvasLayer"]
+material = ExtResource("3_hd1p7")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SimpleBg" type="Sprite2D" parent="."]
+position = Vector2(584.25, 333)
+scale = Vector2(0.61224, 0.612963)
+texture = ExtResource("3_qca7y")
