@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://df1h55w38p1g"]
+
+[ext_resource type="Shader" uid="uid://cpqisy8p7pqkt" path="res://code_shaders/shockwave.gdshader" id="1_d2w3p"]
+
+[resource]
+shader = ExtResource("1_d2w3p")
