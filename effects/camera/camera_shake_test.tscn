@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://nelm1t8ltd7b"]
 
 [ext_resource type="Texture2D" uid="uid://nkserftbik4g" path="res://icon.svg" id="1_ioh5a"]
-[ext_resource type="Script" uid="uid://b8g2lh713ln72" path="res://effects/camera_shake_test.gd" id="1_w7ie2"]
+[ext_resource type="Script" uid="uid://b8g2lh713ln72" path="res://effects/camera/camera_shake_test.gd" id="1_w7ie2"]
 
 [node name="CameraShakeTest" type="Node2D"]
 script = ExtResource("1_w7ie2")
