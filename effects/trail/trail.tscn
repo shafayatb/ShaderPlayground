@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvetyscjq22wa"]
+
+[ext_resource type="Script" uid="uid://cplgf2i43dhft" path="res://effects/trail/trail.gd" id="1_07d6b"]
+
+[sub_resource type="Curve" id="Curve_07d6b"]
+_data = [Vector2(0.006493509, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_07d6b"]
+colors = PackedColorArray(0.8235294, 0.46666667, 0, 1, 1, 0.06666667, 0.40784314, 1)
+
+[node name="Trail" type="Line2D"]
+width = 20.0
+width_curve = SubResource("Curve_07d6b")
+gradient = SubResource("Gradient_07d6b")
+script = ExtResource("1_07d6b")
+MAX_LENGTH = 10
