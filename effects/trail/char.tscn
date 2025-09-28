@@ -1,10 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgs8dqs5tpyqt"]
+[gd_scene load_steps=5 format=3 uid="uid://bgs8dqs5tpyqt"]
 
 [ext_resource type="Texture2D" uid="uid://nkserftbik4g" path="res://icon.svg" id="1_735bs"]
+[ext_resource type="Script" uid="uid://x6c4we75acul" path="res://effects/trail/char.gd" id="1_ivomm"]
+[ext_resource type="PackedScene" uid="uid://bvetyscjq22wa" path="res://effects/trail/trail.tscn" id="3_bdgi6"]
+[ext_resource type="Script" uid="uid://mpr0lnom1ip3" path="res://effects/trail/object_trail.gd" id="4_mcdce"]
 
 [node name="Char" type="CharacterBody2D"]
+script = ExtResource("1_ivomm")
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(0, 1)
 scale = Vector2(0.546875, 0.546875)
 texture = ExtResource("1_735bs")
+
+[node name="Trail" parent="." instance=ExtResource("3_bdgi6")]
+top_level = true
+z_index = -1
+width = 50.0
+script = ExtResource("4_mcdce")
