@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://vxasmutyv3do"]
+
+[ext_resource type="Shader" uid="uid://bgawcu0ia5dn5" path="res://code_shaders/world_space_uv_shader.gdshader" id="1_4i2mk"]
+
+[resource]
+shader = ExtResource("1_4i2mk")
+shader_parameter/uv_scale = 1.0
