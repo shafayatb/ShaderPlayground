@@ -8,6 +8,7 @@ void fragment() {
 
 	float angle = atan(vec.y, vec.x) / (2.0*PI) + 0.5;
 
+	//float progress = smoothstep(angle, angle+0.1, fade);
 	float progress = step(angle, fade);
 
 	COLOR.a *= progress;
