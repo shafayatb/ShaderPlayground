@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c5gdio2oqtfu6"]
+
+[ext_resource type="Shader" uid="uid://cutowgkte5v23" path="res://code_shaders/clockwork_reveal_shader.gdshader" id="1_xbu5y"]
+
+[resource]
+shader = ExtResource("1_xbu5y")
+shader_parameter/fade = 1.0

@@ -8,7 +8,7 @@
 [ext_resource type="Material" uid="uid://deyhyqx3flh4b" path="res://visual_shaders/simple_outline_shader.tres" id="6_4sh6q"]
 [ext_resource type="Texture2D" uid="uid://eck5ouwvjsbi" path="res://assets/head.png" id="7_1mq4w"]
 [ext_resource type="Material" uid="uid://df1h55w38p1g" path="res://code_shaders/shockwave_shader.tres" id="8_1mq4w"]
-[ext_resource type="Shader" uid="uid://cj44pppmdm8s3" path="res://code_shaders/blink_shader.gdshader" id="9_movfo"]
+[ext_resource type="Shader" uid="uid://cutowgkte5v23" path="res://code_shaders/clockwork_reveal_shader.gdshader" id="9_movfo"]
 
 [sub_resource type="Animation" id="Animation_n1cy7"]
 length = 0.001
@@ -72,6 +72,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n1cy7"]
 shader = ExtResource("9_movfo")
+shader_parameter/fade = 1.0
 
 [node name="ShaderTest" type="Node2D"]
 
@@ -119,6 +120,7 @@ libraries = {
 }
 
 [node name="Icon3" type="Sprite2D" parent="."]
+texture_repeat = 2
 material = SubResource("ShaderMaterial_n1cy7")
-position = Vector2(124, 98)
+position = Vector2(67, 60)
 texture = ExtResource("1_v4mft")

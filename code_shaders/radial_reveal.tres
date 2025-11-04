@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://wnf6ch81em0x"]
+
+[ext_resource type="Shader" uid="uid://baostnb6dtjxa" path="res://code_shaders/radial_reveal_shader.gdshader" id="1_505bb"]
+
+[resource]
+shader = ExtResource("1_505bb")
+shader_parameter/fade = 0.0
