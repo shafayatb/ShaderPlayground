@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://djnhxmyp6rrwq"]
+
+[ext_resource type="Shader" uid="uid://bw4lsuoagiv4e" path="res://code_shaders/magic_reveal_shader.gdshader" id="1_12v60"]
+
+[resource]
+shader = ExtResource("1_12v60")
+shader_parameter/progress = 0.6330000300675
+shader_parameter/noise_scale = 100.0
