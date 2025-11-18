@@ -1,14 +1,17 @@
 shader_type canvas_item;
 
-void vertex() {
-	// Called for every vertex the material is visible on.
-}
+uniform float wave_frequency = 10.0;
+uniform float wave_speed = 5.0;
+uniform float wave_amplitude = 0.01;
 
 void fragment() {
-	// Called for every pixel the material is visible on.
+	
+	float wave_x = sin(UV.x * wave_frequency + TIME * wave_speed) * wave_amplitude - wave_amplitude;
+	float wave_y = cos(UV.y * wave_frequency + TIME * wave_speed) * wave_amplitude - wave_amplitude;
+	
+	vec2 wave_uv = UV + vec2(wave_x, wave_y);
+	
+	COLOR = texture(TEXTURE, wave_uv);
+	COLOR.a *= 0.5;	
 }
 
-//void light() {
-//	// Called for every pixel for every light affecting the CanvasItem.
-//	// Uncomment to replace the default light processing function with this one.
-//}

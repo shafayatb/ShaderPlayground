@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://can6jrewj7pqm"]
+
+[ext_resource type="Shader" uid="uid://da2yucv4aair3" path="res://code_shaders/top_wave_shader.gdshader" id="1_citpl"]
+
+[resource]
+shader = ExtResource("1_citpl")
