@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ckwrv8de8a4us"]
+
+[ext_resource type="Shader" uid="uid://bfidfllhhbn6r" path="res://code_shaders/screen_texture_water.gdshader" id="1_oi704"]
+
+[resource]
+shader = ExtResource("1_oi704")
+shader_parameter/wave_frequency = 20.0
+shader_parameter/wave_speed = 1.0
+shader_parameter/wave_amplitude = 0.025
