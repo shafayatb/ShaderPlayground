@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dc5jevqicwk71"]
+[gd_scene load_steps=13 format=3 uid="uid://dc5jevqicwk71"]
 
 [ext_resource type="Texture2D" uid="uid://bg5rt36j5vsud" path="res://assets/simple_bg.jpg" id="1_n1cy7"]
 [ext_resource type="Texture2D" uid="uid://nkserftbik4g" path="res://icon.svg" id="1_v4mft"]
@@ -9,7 +9,6 @@
 [ext_resource type="Material" uid="uid://deyhyqx3flh4b" path="res://visual_shaders/simple_outline_shader.tres" id="6_4sh6q"]
 [ext_resource type="Texture2D" uid="uid://eck5ouwvjsbi" path="res://assets/head.png" id="7_1mq4w"]
 [ext_resource type="Material" uid="uid://df1h55w38p1g" path="res://code_shaders/shockwave_shader.tres" id="8_1mq4w"]
-[ext_resource type="Material" uid="uid://ckwrv8de8a4us" path="res://code_shaders/screen_texture_water.tres" id="10_aigp2"]
 
 [sub_resource type="Animation" id="Animation_n1cy7"]
 length = 0.001
@@ -121,7 +120,6 @@ libraries = {
 }
 
 [node name="Icon3" type="Sprite2D" parent="."]
-material = ExtResource("10_aigp2")
 position = Vector2(411.99997, 243)
 scale = Vector2(5.9453125, 3.578125)
 texture = ExtResource("1_v4mft")
